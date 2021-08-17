@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Игорь Булычев</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="container">                
+            <div class="header">
+
+                <div class="logo">
+                    <a class="logo link" href="./index.html">Игорь</a>
+                </div>
+
+                <nav class="nav">
+                    <a class="link" href="./index.html">Главная</a>
+                    <a class="link" href="./contacts.html">Контакты</a>
+                    <a class="link" href="./about_me.html">Обо мне</a>
+                    <a class="link" href="./projects.html">Портфолио</a>
+                    <a class="link active" href="./blog.html">Блог</a>
+                </nav>
+                                
+            </div>
+
+            <div class="contacts-flex">
+                <div class="contacts">
+
+                    <div class="contacts-phone">
+                        <a href="tg://resolve?domain=goodstoryman"><img class="telegram-icon" src="./img/telegram-icon.svg" alt=""></a>
+                        <a target="blank" href="https://wa.me/79188879948"><img  class="whatsapp-icon" src="./img/whatsapp-icon.svg" alt=""></a>
+                        <a class="link" href="tel:+79188879948">+7-918-887-99-48</a>
+                    </div>
+
+                    <div class="contacts-mail">
+                        <a href="mailto:yamadetta@gmail.com"><img class="gmail-icon" src="./img/gmail-icon.svg" alt=""></a>
+                        <a class="link" href="mailto:yamadetta@gmail.com">yamadetta@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <main class="main main-flex container">
+                <div class="blog">
+                        <h1>Блог</h1>
+                        <article class="article">
+                            <div class="heading">
+                                <h2>О калькуляторе времени</h2>
+                                <time datetime="2021-08-06 12:16">06 авг 2021</time>
+                            </div>
+                            <p>Калькулятор времени был написан мной еще две недели назад и выглядел примерно вот так:</p>
+                            <img class="time-calc-img" src="./blog/img/TimeCalc.jpg" alt="" style="float: left; margin-right: 2rem; width: 40%;">
+                            <p>Да, он не имел нужной стилистики, которую имеет калькулятор на сайте. Но главное, что функции свои он выполнял исправно! Калькулятор – довольно простое задание для тренировки.</p>
+                            <p>Фактически, данный калькулятор можно представить в виде ряда функций, а именно:</p>
+                            <ol>
+                                <li>Конвертор из часов/минут/секунд в единую систему измерений – в секунды;</li>
+                                <li>Вычислитель времени;</li>
+                                <li>Конвертор из секунд обратно в часы;</li>
+                                <li>Алгоритм подбора слова к числу xD</li>
+                            </ol>
+                            <p>Причем, вычислитель времени работает по принципу двух формул, а именно:</p>
+                            <ol>
+                                <li>Если первое значение меньше второго, то мы вычитаем второе значение из первого;</li>
+                                <li>Если второе значение меньше первого, то мы считаем, что данное значение находится в следующих сутках и вычитаем из суток значение первого времени с одновременным сложением значения второго времени.</li>
+                            </ol>
+                            <p>И самое главное, о чем стоит сказать – алгоритм подбора слова к числу, на который у меня ушло больше всего времени. Выглядит он таким образом: </p>
+                            <div class="code">
+                                <code>if (result.hrs == 1 || result.hrs == 21) <br> {<br>
+                                    words.hours = 'час';<br>
+                                } else {<br>
+                                    words.hours = 'часов';<br>
+                                } <br>
+                                if ((result.hrs >= 2 && result.hrs <= 4) || (result.hrs >= 22 && result.hrs <= 24)) <br>
+                                {<br>
+                                    words.hours = 'часа';<br>
+                                }. <br>
+                                </code>
+                            </div>
+                            <p>А на этом всё, до новых встреч!</p>
+                            <a class="link link_hover" href="./projects/time_calculator.html" style="font-size: 1.1rem;">Воспользоваться калькулятором вы сможете по данной ссылке!</a>
+                        </article>
+                    
+                        <article class="article">
+                        <div class="heading">
+                            <h2>Что это за блог?</h2>
+                            <time datetime="2021-07-12 21:00">12 июл 2021</time>
+                        </div>
+                        <p>Я решил разместить на своем сайте страничку блога, где буду публиковать интересные статьи по теме IT, какие-либо замечания и факты. Также, справа (на устройствах с небольшим экраном - снизу) присутствует сайдбар панель, своего рода <dfn title="Репозито́рий (от англ. repository — хранилище) — место, где хранятся и поддерживаются какие-либо данные. Чаще всего данные в репозитории хранятся в виде файлов, доступных для дальнейшего распространения по сети. &#169; ru.wikipedia.org/wiki/Репозиторий">репозиторий</dfn>, в котором будут размещаться версии моего сайта, они кликабельны и доступны к просмотру, отражают прогресс моего развития в отрасли сайтостроения! Чтобы вернуться с сайта из репозитория на основной сайт, достаточно кликнуть на логотип.
+                        <p>Также, этот блог – единственная, на момент написания статьи страница, которая, в дальнейшем, будет длиннее, чем 1600 пикселей. И будет интересно, каким образом я сделаю так, чтобы фоновое изображение было одинаковое на всех сайтах (и адаптивное), но при этом, по окончании фонового изображения по длине, в блоге начинался сплошной цвет.</p>
+                        <p>Спасибо большое, за посещение моего сайта и блога!</p>
+                    </article>
+                    
+                </div>
+                <aside class="sidebar">
+                    <h2>Версии сайта</h2>
+                    <ul>
+                        <li><a class="link" href="./index.html">ver. 2.0<br>11.07.2021-14:27</a></li>
+                        <li><a class="link" href="./blog/old-versions-wp/ver._1.0_05.07.2021-1759/index.html">ver. 1.0<br>05.07.2021-17:59</a></li>
+                    </ul>
+                </aside>
+            </main>    
+
+           
+                    
+                        
+        </div> <!-- ./container -->
+         
+    </div> <!-- ./page --> 
+
+</body>
+
+</html>
